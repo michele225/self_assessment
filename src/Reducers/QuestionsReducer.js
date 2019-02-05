@@ -2,7 +2,7 @@ import ActionTypes from "../Actions/ActionTypes";
 import React from "react";
 
 const initialState = {
-    responseAddQuestions: []
+    responseAddQuestions: null
 }
 
 const QuestionsReducer = (state = initialState , action) => {

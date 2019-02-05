@@ -27,3 +27,27 @@ export const receivedEvent = (obj) => ({
         newValue: obj
     },
 });
+
+
+export function asyncCallGetAllQuestions(requestBody) {
+    var url = 'http://localhost:3002/getAllQuestions'
+
+    return function (dispatch) {
+        axios.post(url, JSON.stringify(requestBody))
+            .then((result) => {
+                const response = result.data.Response;
+                dispatch(receivedEventBetweenDate(response))
+            })
+            .catch((err) => {
+                console.log("Errore: " + err.response.data)
+            })
+    };
+
+}
+
+export const receivedEventBetweenDate = (obj) => ({
+    type: ActionTypes.ALL_QUESTION,
+    payload: {
+        newValue: obj
+    },
+})
