@@ -4,7 +4,8 @@ import React from "react";
 const initialState = {
     responseAddQuestions: null,
     responseAllQuestions: [],
-    questionNumber: 0
+    questionNumber: 0,
+    responseSurvey: null
 }
 
 const QuestionsReducer = (state = initialState , action) => {
@@ -15,6 +16,10 @@ const QuestionsReducer = (state = initialState , action) => {
 
         case ActionTypes.ALL_QUESTION:
             return { ...state, responseAllQuestions: action.payload.newValue};
+
+        case ActionTypes.ADD_SURVEY:
+            return { ...state, responseSurvey: action.payload.newValue};
+
 
         default:
             return state;
