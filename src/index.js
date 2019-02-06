@@ -8,7 +8,7 @@ import store from './Store/AppStore'
 import './App.css'
 
 
-
+$('#root').css("overflow-y", "scroll");
 var link = $('<link/>', {
     rel: 'stylesheet',
     type:'text/css',

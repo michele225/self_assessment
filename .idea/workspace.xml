@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cbefa44a-a574-4517-809b-b86106f3abcc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/QuestionsAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/QuestionsAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/ShowQuestions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ShowQuestions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/QuestionsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/QuestionsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/ShowQuestionsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/ShowQuestionsContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/QuestionsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/QuestionsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,13 +29,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="js" value="34" />
+          <entry key="js" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="JavaScript" value="34" />
+          <entry key="JavaScript" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -49,38 +45,50 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="300" />
-          <entry key="js" value="3013" />
-          <entry key="txt" value="105" />
+          <entry key="css" value="302" />
+          <entry key="js" value="3216" />
+          <entry key="txt" value="155" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="300" />
-          <entry key="JavaScript" value="3013" />
-          <entry key="PLAIN_TEXT" value="105" />
+          <entry key="CSS" value="302" />
+          <entry key="JavaScript" value="3216" />
+          <entry key="PLAIN_TEXT" value="155" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+            <state relative-caret-position="220">
+              <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Questions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+            <state relative-caret-position="186">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +111,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/Store/AppStore.js" />
         <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Actions/ActionTypes.js" />
         <option value="$PROJECT_DIR$/src/Actions/AllQuestionsAction.js" />
         <option value="$PROJECT_DIR$/src/Actions/QuestionsAction.js" />
@@ -112,8 +119,9 @@
         <option value="$PROJECT_DIR$/src/Containers/ShowQuestionsContainer.js" />
         <option value="$PROJECT_DIR$/src/Containers/QuestionsContainer.js" />
         <option value="$PROJECT_DIR$/src/Reducers/QuestionsReducer.js" />
-        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Questions.js" />
+        <option value="$PROJECT_DIR$/src/App.css" />
       </list>
     </option>
   </component>
@@ -230,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549378271174</updated>
       <workItem from="1549378273494" duration="10821000" />
-      <workItem from="1549441668394" duration="13183000" />
+      <workItem from="1549441668394" duration="17447000" />
     </task>
     <task id="LOCAL-00001" summary="Inserimento di una domanda, con relativa API">
       <created>1549385102944</created>
@@ -246,11 +254,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549388475974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Aggiornamento sulla creazione del questionario">
+      <created>1549462441168</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1549462441168</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24004000" />
+    <option name="totallyTimeSpent" value="28268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -270,7 +285,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33756614" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35661376" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -285,7 +300,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inserimento di una domanda, con relativa API" />
     <MESSAGE value="Inserimento domanda e risposte, con relativa API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserimento domanda e risposte, con relativa API" />
+    <MESSAGE value="Aggiornamento sulla creazione del questionario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiornamento sulla creazione del questionario" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/index.css">
@@ -368,13 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Reducers/QuestionsReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -395,20 +404,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+        <state relative-caret-position="186">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
         </state>
       </provider>
     </entry>

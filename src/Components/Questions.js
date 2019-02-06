@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 import store from "../Store/AppStore";
 import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
+import $ from "jquery";
 
+
+let questionsCopia = [];
 
 class Questions extends Component {
 
@@ -27,18 +30,18 @@ class Questions extends Component {
             Risposta_b: this.answer2.value,
             Risposta_c: this.answer3.value,
             Risposta_d: this.answer4.value,
-            Risposta_esatta: this.answerOK.value,
-
+            Risposta_esatta: this.answerOK.value
         }
+
         this.props.addQuestions(requestBody)
         this.setState({
             numberQ: this.state.numberQ+1
         })
 
-        let questionsCopia = this.state.questions;
+         questionsCopia = this.state.questions;
 
             questionsCopia.push(
-                <div className="container2" >
+                <div className="container2" key={this.state.numberQ}>
                     <h2 className="Noteh2">Domanda n° {this.state.numberQ}</h2>
                     <form>
                         <input type="text" className=" insertQuestion" placeholder="... New Question ..." ref={(input) => this.getQuestion = input}/>
@@ -53,22 +56,22 @@ class Questions extends Component {
                         <li className="answer"> <input className="insertAnswers" type="text" placeholder="Risposta esatta" ref={(input) => this.answerOK = input}/>    </li>
                     </ul>
                     <br/>
+
+                    {
+                        questionsCopia[this.state.numberQ-1]
+                    }
                 </div>
             )
 
         this.setState({
             questions: questionsCopia
         })
+
         console.log(this.state.questions)
 
     }
 
 
-    slideArray = () =>{
-            for ( let k=0; k <this.state.numberQ; k++){
-
-            }
-    }
 
 
 
@@ -76,7 +79,7 @@ class Questions extends Component {
 
         return(
 
-                <div className="container" id= "listaDomande">
+                <div className="container">
                     <h2 className="Noteh2">Inserisci una nuova domanda</h2>
                     <form>
                         <input type="text" className=" insertQuestion" placeholder="... New Question ..." ref={(input) => this.getQuestion = input}/>
@@ -101,8 +104,7 @@ class Questions extends Component {
                     <div className="sig"></div>
 
                     {
-                       this.state.questions[this.state.numberQ -1 ]
-
+                        questionsCopia[this.state.numberQ-1]
                     }
                 </div>
 
