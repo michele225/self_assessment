@@ -78,6 +78,15 @@
   font-size:calc(10px + 2vmin);
 }
 
+@media screen and (max-width: 750px) {
+  .insertAnswers {
+    width: 70%;
+    height: 15%;
+    margin-top: 2px;
+    margin-left: -10%;
+    font-size:calc(10px + 2vmin);}
+}
+
 .insertAnswers:hover{
   background-color: #2eff34;
 }
@@ -86,3 +95,13 @@
   list-style-type: none;
 
 }
+
+
+.container2{
+    margin-top: 10%;
+    margin-left: 14%;
+    width: 70%;
+    height: 90%;
+}
+
+

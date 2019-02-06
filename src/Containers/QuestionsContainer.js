@@ -5,7 +5,8 @@ import Questions from "../Components/Questions";
 
 const mapStateToProps = (state) => {
     return {
-        responseAddQuestions: state.QuestionsReducer.responseAddQuestions
+        responseAddQuestions: state.QuestionsReducer.responseAddQuestions,
+        questionNumber: state.QuestionsReducer.questionNumber
     };
 };
 

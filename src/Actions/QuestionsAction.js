@@ -36,7 +36,7 @@ export function asyncCallGetAllQuestions(requestBody) {
         axios.post(url, JSON.stringify(requestBody))
             .then((result) => {
                 const response = result.data.Response;
-                dispatch(receivedEventBetweenDate(response))
+                dispatch(receivedAllQuestion(response))
             })
             .catch((err) => {
                 console.log("Errore: " + err.response.data)
@@ -45,7 +45,7 @@ export function asyncCallGetAllQuestions(requestBody) {
 
 }
 
-export const receivedEventBetweenDate = (obj) => ({
+export const receivedAllQuestion = (obj) => ({
     type: ActionTypes.ALL_QUESTION,
     payload: {
         newValue: obj
