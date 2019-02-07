@@ -34,6 +34,7 @@ class Questions extends Component {
             Risposta_c: this.answer3.value,
             Risposta_d: this.answer4.value,
             Risposta_esatta: this.answerOK.value,
+            Titolo: this.getTitle.value
         }
 
         const requestBodySurvey = {
