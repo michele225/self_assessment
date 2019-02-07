@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import QuestionContainer from "./Containers/QuestionsContainer";
+import SurveyContainer from "./Containers/SurveyContainer";
 
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
 
-          <QuestionContainer/>
+          <SurveyContainer/>
         </header>
       </div>
     );

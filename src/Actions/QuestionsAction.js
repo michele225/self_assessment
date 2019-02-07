@@ -77,6 +77,3 @@ export const receiveSuervy = (obj) => ({
 })
 
 
-export const saveNewSurvey = () => ({
-    type: ActionTypes.SAVE_NEW_SURVEY
-})
