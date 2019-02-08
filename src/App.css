@@ -412,3 +412,11 @@
   transform: rotate(45deg);
 }
 
+
+#ResponseOK {
+  display: none;
+}
+
+#ResponseNO {
+  display: none;
+}

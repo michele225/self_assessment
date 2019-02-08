@@ -6,5 +6,7 @@ export default keyMirror({
     ALL_SURVEY: null,
     ADD_SURVEY: null,
     DELETE_SURVEY: null,
-    EDIT_SURVEY: null
+    CONTROL_RESPONSE: null,
+    EDIT_SURVEY: null,
+    CHECK_RESPONSE: null
 })

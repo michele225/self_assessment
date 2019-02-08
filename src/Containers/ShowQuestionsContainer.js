@@ -6,7 +6,11 @@ import ShowQuestions from "../Components/ShowQuestions";
 const mapStateToProps = (state) => {
     return {
         responseAllQuestions: state.QuestionsReducer.responseAllQuestions,
-        responseQuestionSurveyDone: state.QuestionsReducer.responseQuestionSurveyDone
+        responseQuestionSurveyDone: state.QuestionsReducer.responseQuestionSurveyDone,
+        numberREs: state.QuestionsReducer.numberREs,
+        numberDomanda: state.QuestionsReducer.numberDomanda,
+
+
 
     };
 };
@@ -16,7 +20,6 @@ const mapDispatchToProps = (dispatch) => {
         getSurvey:(requestBody) => {
             dispatch(actions.asyncCallGetAllQuestionsSurvey(requestBody))
         }
-
     }
 }
 

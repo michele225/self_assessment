@@ -53,4 +53,8 @@ export const receiveSuervy = (obj) => ({
     },
 })
 
+export const controlResponse = () => ({
+    type: ActionTypes.CONTROL_RESPONSE
+})
+
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import $ from "jquery";
+import SingleQuestion from "./SingleQuestion";
 
-let point = 0;
+import SingleQuestionContainer from "../Containers/SingleQuestionContainer"
+
 
 class ShowQuestions extends Component {
 
@@ -31,16 +33,7 @@ class ShowQuestions extends Component {
 
 
 
-    verifica = (question) => {
-        var re = $('input[name="html"]:checked').val();
-        console.log(re +question.Risposta_esatta )
-        if(re == question.Risposta_esatta) {
-            point = point + 1;
-        }
-        else point = point - 1;
-        console.log(point)
 
-    }
 
 
     render() {
@@ -54,37 +47,9 @@ class ShowQuestions extends Component {
 
 
         questions  = this.props.responseAllQuestions.map((question) =>
-
-            <div key={question.Descrizione}>
-
-                <lu className="liResponse">
-                    <h1>D: {question.Descrizione} </h1>
-                    <br/>
-                    <label class="containerCheckbox">  {question.Risposta_a}
-                        <input name="html" type="checkbox" value={question.Risposta_a} onClick={() => this.verifica(question)} />
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="containerCheckbox"> {question.Risposta_b}
-                        <input name="html" type="checkbox" value={question.Risposta_b} onClick={() => this.verifica(question)}/>
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="containerCheckbox">  {question.Risposta_c}
-                        <input name="html" type="checkbox" value={question.Risposta_c} onClick={() => this.verifica(question)}/>
-                        <span className="checkmark"></span>
-                    </label>
-                    <label className="containerCheckbox">  {question.Risposta_d}
-                        <input name="html" type="checkbox" value={question.Risposta_d} onClick={() => this.verifica(question)}/>
-                        <span className="checkmark"></span>
-                    </label>
-
-                    <br/>
-                    <br/>
-                </lu>
-
-
-            </div>
-
+            <SingleQuestionContainer question = {question} numberQuestion = {this.props.responseAllQuestions.length} />
         )
+
 
 
 
@@ -92,10 +57,13 @@ class ShowQuestions extends Component {
         return(
             <div className="App">
                 <div className="App-header">
+                    <h1> Questionario {this.props.Titolo}</h1>
 
                     <div className="container2">
-                        {questions}
+                        {questions[this.props.numberDomanda]}
                     </div>
+
+                    <h2> Risposte Esatte : {this.props.numberREs} </h2>
                 </div>
             </div>
 
