@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import QuestionsContainer from "../Containers/QuestionsContainer";
+import Provider from "react-redux/es/components/Provider";
+import store from "../Store/AppStore";
+import ReactDOM from "react-dom";
+import '../App.css'
+import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
+import SurveyContainer from "../Containers/SurveyContainer";
+import Questions from "./Questions";
 
 
 class Survey extends Component {
@@ -10,7 +17,37 @@ class Survey extends Component {
 
 
     addSurvey = () => {
-        return <QuestionsContainer/>
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <QuestionsContainer/>
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
+    }
+
+
+    deleteSurvey = (survey) => {
+        const requestBody = {
+            Titolo: survey.Titolo
+        }
+        console.log(requestBody)
+        this.props.deleteSurvey(requestBody)
+    }
+
+
+
+    openThisSurvey = (survey) => {
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <ShowQuestionsContainer Titolo={survey.Titolo} />
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
+
     }
 
     render() {
@@ -24,24 +61,24 @@ class Survey extends Component {
         let surveys = ""
 
         surveys = this.props.responseAllSurveys.map((survey) =>
-            <div key={survey.Titolo} className="tile">
+            <div key={survey.Titolo} className="tile" onClick={() => this.openThisSurvey(survey)}>
 
                 <p className="fas fa-calendar-edit"></p>
 
-                <ui className="liEvents">
-                    <p className="tile-description">  <label className="TitoloSurvey">Titolo: {survey.Titolo} </label>
+                <ul className="liEvents">
+                    <div className="tile-description">  <label className="TitoloSurvey">Titolo: {survey.Titolo} </label>
                         <br/>
                         <div className="tile-divider"></div>
                         <br/>
 
                         <label className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </label>
-                    </p>
+                    </div>
 
 
-                </ui>
+                </ul>
                 <div className="underFile">
                     <button onClick={this.editFile} className="edit"> edit </button>
-                    <button onClick={this.deleteFile} className="delete"> delete </button>
+                    <button onClick={() => this.deleteSurvey(survey)}  className="delete"> delete </button>
                 </div>
 
 

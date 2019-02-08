@@ -5,7 +5,8 @@ const initialState = {
     responseAddQuestions: null,
     responseAllQuestions: [],
     questionNumber: 0,
-    responseSurvey: null
+    responseSurvey: null,
+    responseQuestionSurveyDone: false
 }
 
 const QuestionsReducer = (state = initialState , action) => {
@@ -15,7 +16,7 @@ const QuestionsReducer = (state = initialState , action) => {
             return { ...state, responseAddQuestions: action.payload.newValue, questionNumber: state.questionNumber+1};
 
         case ActionTypes.ALL_QUESTION:
-            return { ...state, responseAllQuestions: action.payload.newValue};
+            return { ...state, responseAllQuestions: action.payload.newValue, responseQuestionSurveyDone: true};
 
         case ActionTypes.ADD_SURVEY:
             return { ...state, responseSurvey: action.payload.newValue};

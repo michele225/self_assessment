@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 import store from "../Store/AppStore";
-import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
-import $ from "jquery";
+import SurveyContainer from "../Containers/SurveyContainer";
 
 
 let questionsCopia = [];
+
+let requestBody = {
+
+}
 
 class Questions extends Component {
 
@@ -20,12 +23,19 @@ class Questions extends Component {
 
 
     saveNewSurvey =() => {
-        this.props.saveNewSurvey()
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <SurveyContainer />
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
     }
 
     addQuestions = (e) =>{
         e.preventDefault();
-        const requestBody = {
+         requestBody = {
             Canale: 'Town Square',
             Tipo: 'Ospedale',
             Descrizione: this.getQuestion.value,
@@ -45,7 +55,7 @@ class Questions extends Component {
         }
 
         //per salvare questionario solo la prima volta
-        if(questionsCopia.length== 0){
+        if(questionsCopia.length == 0){
             this.props.addSurvey(requestBodySurvey)
         }
 
@@ -106,7 +116,8 @@ class Questions extends Component {
     render() {
 
         return(
-
+            <div className="App">
+                <div className="App-header">
                 <div className="container">
                     <h3 className="Noteh2">Inserisci i Dati del Questionario</h3>
 
@@ -132,8 +143,8 @@ class Questions extends Component {
                         <li className="answer"> <input className="insertAnswers" type="text" placeholder="Risposta esatta" ref={(input) => this.answerOK = input}/>    </li>
                     </ul>
                     <br/>
-                    <button className="addQuestion button2" >
-                        <span className="NoteSpan">Save & Complete Survey</span>
+                    <button className="addQuestion button2" onClick={this.saveNewSurvey} >
+                        <span className="NoteSpan" >Save & Complete Survey</span>
                     </button>
                     <button className="addQuestion button3" onClick={this.addQuestions}>
                         <span>New Question</span>
@@ -145,6 +156,8 @@ class Questions extends Component {
                         questionsCopia[this.state.numberQ-1]
                     }
                 </div>
+                </div>
+            </div>
 
 
         )

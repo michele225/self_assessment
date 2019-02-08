@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
-import * as actions from "../Actions/QuestionsAction";
+import * as actions from "../Actions/SurveyAction";
 import ShowQuestions from "../Components/ShowQuestions";
 
 
 const mapStateToProps = (state) => {
     return {
-        responseAllQuestions: state.QuestionsReducer.responseAllQuestions
+        responseAllQuestions: state.QuestionsReducer.responseAllQuestions,
+        responseQuestionSurveyDone: state.QuestionsReducer.responseQuestionSurveyDone
+
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        asyncCallGetAllQuestions:(requestBody) => {
-            dispatch(actions.asyncCallGetAllQuestions(requestBody))
+        getSurvey:(requestBody) => {
+            dispatch(actions.asyncCallGetAllQuestionsSurvey(requestBody))
         }
 
     }
