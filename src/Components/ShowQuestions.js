@@ -3,6 +3,10 @@ import $ from "jquery";
 import SingleQuestion from "./SingleQuestion";
 
 import SingleQuestionContainer from "../Containers/SingleQuestionContainer"
+import ReactDOM from "react-dom";
+import Provider from "react-redux/es/components/Provider";
+import store from "../Store/AppStore";
+import SurveyContainer from "../Containers/SurveyContainer";
 
 
 class ShowQuestions extends Component {
@@ -22,13 +26,15 @@ class ShowQuestions extends Component {
     }
 
 
-    pointCalculator = ( ) => {
-        let point = 0;
-        for (let i=0; i<this.props.responseAllQuestions; i ++){
-            if(this.verifica()) point = point +1;
-        }
-        console.log(point)
-        return point;
+    goHomeSurvey = () => {
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <SurveyContainer />
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
     }
 
 
@@ -63,7 +69,18 @@ class ShowQuestions extends Component {
                         {questions[this.props.numberDomanda]}
                     </div>
 
-                    <h2> Risposte Esatte : {this.props.numberREs} </h2>
+                    {
+                        this.props.numberDomanda==this.props.responseAllQuestions.length?
+                            <div>
+                                <h2> Risposte Esatte: {this.props.numberREs} / {this.props.responseAllQuestions.length} </h2>
+                                <button onClick={this.goHomeSurvey} > Re-Start </button>
+                            </div>
+
+
+                            :
+                            <div></div>
+                    }
+
                 </div>
             </div>
 

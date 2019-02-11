@@ -21,6 +21,8 @@ class SingleQuestion extends Component {
             Risposta: re
         }
 
+        console.log( $('.messageCheckbox:checked').val())
+
         this.props.asyncCallCheckResponse(requestBody)
 
 
@@ -56,7 +58,14 @@ class SingleQuestion extends Component {
 
                     <br/>
                     <br/>
-                    <button className="button2" onClick={() => this.verificaRisposta(this.props.question)}> NEXT QUESTION</button>
+
+                    {
+                       1?
+                            <button className="button2" onClick={() => this.verificaRisposta(this.props.question)}> NEXT QUESTION</button>
+                            :
+                            <div></div>
+                    }
+
 
                 </lu>
 

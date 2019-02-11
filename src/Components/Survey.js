@@ -3,7 +3,6 @@ import QuestionsContainer from "../Containers/QuestionsContainer";
 import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
 import ReactDOM from "react-dom";
-import '../App.css'
 import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
 import SurveyContainer from "../Containers/SurveyContainer";
 import Questions from "./Questions";
@@ -61,12 +60,12 @@ class Survey extends Component {
         let surveys = ""
 
         surveys = this.props.responseAllSurveys.map((survey) =>
-            <div key={survey.Titolo} className="tile" onClick={() => this.openThisSurvey(survey)}>
+            <div key={survey.Titolo} className="tile" >
 
                 <p className="fas fa-calendar-edit"></p>
 
                 <ul className="liEvents">
-                    <div className="tile-description">  <label className="TitoloSurvey">Titolo: {survey.Titolo} </label>
+                    <div className="tile-description" onClick={() => this.openThisSurvey(survey)}>  <label className="TitoloSurvey">Titolo: {survey.Titolo} </label>
                         <br/>
                         <div className="tile-divider"></div>
                         <br/>
