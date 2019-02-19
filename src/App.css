@@ -118,9 +118,9 @@
 
 
 /* stile per view all surveys*/
-
 .tiles-flex {
-  margin-top: 5%;
+  margin-top: -10%;
+  margin-left: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,11 +130,6 @@
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  max-width: 1800px;
 }
 
 
@@ -143,7 +138,7 @@
   background-color: #fff;
   box-shadow: 0.5px 2px 4px 0 #bdbdbd;
   width: 200px;
-  height: 240px;
+  height: auto;
   margin: 10px;
   padding: 10px;
   -webkit-transition: 250ms;
@@ -182,7 +177,6 @@
   -ms-flex-item-align: auto;
   align-self: auto;
 }
-
 .tile .tile-title {
   font-size: 20px;
   letter-spacing: .4px;
@@ -200,30 +194,21 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 .tile .tile-description {
+  padding: 20px 0px;
   font-size: 14px;
   letter-spacing: .2px;
   line-height: 1.25;
   color: #1569C7;
-  height: 89px;
-  width: 100%;
   margin: 0px;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: auto;
-  align-self: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-left: -10%;
 }
 
 .delete {
@@ -289,30 +274,17 @@
 }
 
 .TitoloSurvey{
-    position: relative;
-    margin-top: -50px;
-  font-size: calc(10px + 3vmin);
-  width: 100%;
+  font-size: 1rem;
+  padding: 0px 10px;
 }
 
-@media screen and (max-width: 400px) {
-  .TitoloSurvey {
-    font-size:calc(20px + 3vmin);
-    width: 100%;
-  }
-}
 
 .DescrizioneSurvey{
-  font-size: calc(10px + 2vmin);
-  width: 100%;
+  font-size: 1rem;
+  padding: 10px 10px;
 }
 
-@media screen and (max-width: 400px) {
-  .DescrizioneSurvey {
-    font-size:calc(14px + 3vmin);
-    width: 100%;
-   }
-}
+
 
 .liEvents{
   margin-left: 0px;
@@ -335,8 +307,7 @@
 }
 
  .underFile{
-   position: absolute;
-    margin-top: 90%;
+   padding: 20px 10px;
  }
 
  .liResponse{
@@ -419,4 +390,8 @@
 
 #ResponseNO {
   display: none;
+}
+
+.imageDelete{
+  margin-left: 10px;
 }

@@ -60,40 +60,34 @@ class Survey extends Component {
         let surveys = ""
 
         surveys = this.props.responseAllSurveys.map((survey) =>
-            <div key={survey.Titolo} className="tile" >
-
-                <p className="fas fa-calendar-edit"></p>
-
-                <ul className="liEvents">
-                    <div className="tile-description" onClick={() => this.openThisSurvey(survey)}>  <label className="TitoloSurvey">Titolo: {survey.Titolo} </label>
-                        <br/>
-                        <div className="tile-divider"></div>
-                        <br/>
-
-                        <label className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </label>
-                    </div>
+            <a key={survey.Titolo} className="tile" >
 
 
-                </ul>
+                    <h2 className="tile-description" onClick={() => this.openThisSurvey(survey)}>  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
+                   <span className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </span>
+
+                    <div className="tile-divider"></div>
+
+
                 <div className="underFile">
-                    <button onClick={this.editFile} className="edit"> edit </button>
-                    <button onClick={() => this.deleteSurvey(survey)}  className="delete"> delete </button>
+                    <img src="https://png.icons8.com/color/edit"  onClick={this.editFile}/>
+                    <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={() => this.deleteSurvey(survey)} />
                 </div>
 
 
 
-
-            </div>
+            </a>
         )
 
         return(
-
-            <div>
+            <div className="App">
+                <div className="App-header">
                 <button className="button2 addSurvey" onClick={this.addSurvey}>ADD SURVEY</button>
                 <div className="tiles-flex">
                     {surveys}
                 </div>
 
+            </div>
             </div>
         )
     }
