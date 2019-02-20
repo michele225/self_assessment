@@ -30,6 +30,9 @@ const QuestionsReducer = (state = initialState , action) => {
             if(action.payload.newValue)  return { ...state, numberREs: state.numberREs+1, numberDomanda: state.numberDomanda+1};
             else return {... state, numberDomanda: state.numberDomanda+1};
 
+        case ActionTypes.RESTART_SURVEY:
+            return { ...state, numberDomanda: initialState.numberDomanda, numberREs:initialState.numberREs};
+
 
         default:
             return state;

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import QuestionsContainer from "../Containers/QuestionsContainer";
 import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
-import ReactDOM from "react-dom";
 import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
 import SurveyContainer from "../Containers/SurveyContainer";
 import Questions from "./Questions";
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 class Survey extends Component {
@@ -82,11 +83,14 @@ class Survey extends Component {
         return(
             <div className="App">
                 <div className="App-header">
-                <button className="button2 addSurvey" onClick={this.addSurvey}>ADD SURVEY</button>
-                <div className="tiles-flex">
-                    {surveys}
-                </div>
+                    <a className="btn-toolset addSurvey" onClick={this.addSurvey}>
+                         <strong>Add Survey</strong>
 
+                    </a>
+
+                    <div className="tiles-flex">
+                         {surveys}
+                  </div>
             </div>
             </div>
         )

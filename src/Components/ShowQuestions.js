@@ -37,6 +37,10 @@ class ShowQuestions extends Component {
         );
     }
 
+    restart = () => {
+            this.props.reStartSurvey()
+    }
+
 
 
 
@@ -73,7 +77,10 @@ class ShowQuestions extends Component {
                         this.props.numberDomanda==this.props.responseAllQuestions.length?
                             <div>
                                 <h2> Risposte Esatte: {this.props.numberREs} / {this.props.responseAllQuestions.length} </h2>
-                                <button onClick={this.goHomeSurvey} > Re-Start </button>
+                                <button onClick={this.goHomeSurvey}  className="addQuestion button3"> Go to Home </button>
+                                <button onClick={this.restart}  className="addQuestion button2"> Re-Start  </button>
+
+
                             </div>
 
 

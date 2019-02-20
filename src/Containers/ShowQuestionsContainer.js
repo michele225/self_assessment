@@ -8,10 +8,7 @@ const mapStateToProps = (state) => {
         responseAllQuestions: state.QuestionsReducer.responseAllQuestions,
         responseQuestionSurveyDone: state.QuestionsReducer.responseQuestionSurveyDone,
         numberREs: state.QuestionsReducer.numberREs,
-        numberDomanda: state.QuestionsReducer.numberDomanda,
-
-
-
+        numberDomanda: state.QuestionsReducer.numberDomanda
     };
 };
 
@@ -19,6 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getSurvey:(requestBody) => {
             dispatch(actions.asyncCallGetAllQuestionsSurvey(requestBody))
+        },
+        reStartSurvey:() => {
+            dispatch(actions.reStartSurvey())
         }
     }
 }

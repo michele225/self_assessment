@@ -48,3 +48,7 @@ export const receivedAllQuestion = (obj) => ({
         newValue: obj
     },
 })
+
+export const reStartSurvey = () => ({
+    type: ActionTypes.RESTART_SURVEY
+})
