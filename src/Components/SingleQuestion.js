@@ -33,11 +33,11 @@ class SingleQuestion extends Component {
     render() {
 
         return(
-            <div key={this.props.question.Descrizione}>
+            <div key={this.props.question.Descrizione} className="Domanda">
 
                 <lu className="liResponse">
-                    <h1>Domanda {this.props.numberDomanda+1}/{this.props.numberQuestion}</h1>
-                    <h2> {this.props.question.Descrizione} </h2>
+                    <h4>Domanda {this.props.numberDomanda+1}/{this.props.numberQuestion}</h4>
+                    <h1> {this.props.question.Descrizione} </h1>
                     <br/>
                     <label className="containerCheckbox">  {this.props.question.Risposta_a}
                         <input id="myCheck" name="html" type="radio" value={this.props.question.Risposta_a}/>
@@ -60,7 +60,7 @@ class SingleQuestion extends Component {
                     <br/>
 
                     {
-                       1?
+                        1?
                             <button className="button2" onClick={() => this.verificaRisposta(this.props.question)}> NEXT QUESTION</button>
                             :
                             <div></div>
