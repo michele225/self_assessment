@@ -8,7 +8,8 @@ const initialState = {
     responseSurvey: null,
     responseQuestionSurveyDone: false,
     numberREs: 0,
-    numberDomanda: 0
+    numberDomanda: 0,
+    isChecked: false
 }
 
 const QuestionsReducer = (state = initialState , action) => {
@@ -27,11 +28,14 @@ const QuestionsReducer = (state = initialState , action) => {
             console.log(action.payload.newValue)
 
         case ActionTypes.CHECK_RESPONSE:
-            if(action.payload.newValue)  return { ...state, numberREs: state.numberREs+1, numberDomanda: state.numberDomanda+1};
-            else return {... state, numberDomanda: state.numberDomanda+1};
+            if(action.payload.newValue)  return { ...state, numberREs: state.numberREs+1, numberDomanda: state.numberDomanda+1, isChecked:false};
+            else return {... state, numberDomanda: state.numberDomanda+1,  isChecked:false};
 
         case ActionTypes.RESTART_SURVEY:
             return { ...state, numberDomanda: initialState.numberDomanda, numberREs:initialState.numberREs};
+
+        case ActionTypes.IS_CHECKED:
+            return { ...state, isChecked: true};
 
 
         default:

@@ -58,3 +58,7 @@ export const controlResponse = () => ({
 })
 
 
+export const isChecked = () => ({
+    type: ActionTypes.IS_CHECKED
+})
+

@@ -75,10 +75,10 @@ class Survey extends Component {
         surveys = this.props.responseAllSurveys.map((survey) =>
             <a key={survey.Titolo} className="tile" >
 
-
-                    <h2 className="tile-description" onClick={() => this.openThisSurvey(survey)}>  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
+                    <div onClick={() => this.openThisSurvey(survey)}>
+                    <h2 className="tile-description" >  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
                    <span className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </span>
-
+                    </div>
                     <div className="tile-divider"></div>
 
 

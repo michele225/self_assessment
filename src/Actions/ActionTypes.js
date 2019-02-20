@@ -9,5 +9,6 @@ export default keyMirror({
     CONTROL_RESPONSE: null,
     EDIT_SURVEY: null,
     CHECK_RESPONSE: null,
-    RESTART_SURVEY: null
+    RESTART_SURVEY: null,
+    IS_CHECKED: null
 })

@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     return {
         numberREs: state.QuestionsReducer.numberREs,
         numberDomanda: state.QuestionsReducer.numberDomanda,
-
+        isChecked: state.QuestionsReducer.isChecked
     };
 };
 
@@ -16,6 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         asyncCallCheckResponse: (data) => {
             dispatch(actionsR.asyncCallCheckResponse(data));
+        },
+        controlIsChecked: () => {
+            dispatch(actionsQ.isChecked());
         }
 
     }
