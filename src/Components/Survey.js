@@ -7,6 +7,7 @@ import SurveyContainer from "../Containers/SurveyContainer";
 import Questions from "./Questions";
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import EditSurveyContainer from "../Containers/EditSurveyContainer";
 
 
 class Survey extends Component {
@@ -34,6 +35,17 @@ class Survey extends Component {
         }
         console.log(requestBody)
         this.props.deleteSurvey(requestBody)
+    }
+
+    editSurvey = (survey) => {
+        ReactDOM.render(
+            <Provider store={store}>
+                <div>
+                    <EditSurveyContainer Survey={survey} />
+                </div>
+            </Provider>,
+            document.getElementById('root'),
+        );
     }
 
 
@@ -71,7 +83,7 @@ class Survey extends Component {
 
 
                 <div className="underFile">
-                    <img src="https://png.icons8.com/color/edit"  onClick={this.editFile}/>
+                    <img src="https://png.icons8.com/color/edit" onClick={() => this.editSurvey(survey)}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={() => this.deleteSurvey(survey)} />
                 </div>
 

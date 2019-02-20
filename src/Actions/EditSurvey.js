@@ -3,7 +3,7 @@ import ActionTypes from "./ActionTypes";
 
 
 export function asyncCallEditSurveys(data) {
-    var url = 'http://localhost:3002/deleteSurvey'
+    var url = 'http://localhost:3002/editSurvey'
 
     return function (dispatch) {
         console.log(JSON.stringify(data))

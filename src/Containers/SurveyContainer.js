@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import * as actions from "../Actions/SurveyAction";
 import * as actionsDelete from "../Actions/DeleteActions";
+import * as actionsEdit from "../Actions/EditSurvey";
+
 
 import Survey from "../Components/Survey";
 
@@ -19,6 +21,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         deleteSurvey:(requestBody) => {
             dispatch(actionsDelete.asyncCallDeleteSurveys(requestBody))
+        },
+        editSurvey:(requestBody) => {
+            dispatch(actionsEdit.asyncCallEditSurveys(requestBody))
         }
     }
 }
