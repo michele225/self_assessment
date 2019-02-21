@@ -16,7 +16,6 @@ class Survey extends Component {
         super(props);
     }
 
-
     addSurvey = () => {
         ReactDOM.render(
             <Provider store={store}>
@@ -24,7 +23,8 @@ class Survey extends Component {
                     <QuestionsContainer/>
                 </div>
             </Provider>,
-            document.getElementById('root'),
+        document.getElementById('root'),
+        //document.getElementById('post-list'),
         );
     }
 
@@ -45,6 +45,7 @@ class Survey extends Component {
                 </div>
             </Provider>,
             document.getElementById('root'),
+            //document.getElementById('post-list'),
         );
     }
 
@@ -58,37 +59,28 @@ class Survey extends Component {
                 </div>
             </Provider>,
             document.getElementById('root'),
+            //document.getElementById('post-list'),
         );
 
     }
 
     render() {
-
         if(!this.props.getAllSurveyDone){
             this.props.asyncCallGetAllSurveys();
         }
-
         console.log(this.props.responseAllSurveys)
-
         let surveys = ""
-
         surveys = this.props.responseAllSurveys.map((survey) =>
             <a key={survey.Titolo} className="tile" >
-
                     <div onClick={() => this.openThisSurvey(survey)}>
                     <h2 className="tile-description" >  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
                    <span className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </span>
                     </div>
                     <div className="tile-divider"></div>
-
-
                 <div className="underFile">
                     <img src="https://png.icons8.com/color/edit" onClick={() => this.editSurvey(survey)}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={() => this.deleteSurvey(survey)} />
                 </div>
-
-
-
             </a>
         )
 
@@ -107,7 +99,6 @@ class Survey extends Component {
             </div>
         )
     }
-
 }
 
 export default Survey

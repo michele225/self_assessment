@@ -12,10 +12,7 @@ class EditSurvey extends Component {
 
     constructor (props){
         super(props);
-        this.state = {
-        }
     }
-
 
     editSurvey = () => {
         const requestBody = {
@@ -24,7 +21,6 @@ class EditSurvey extends Component {
             Descrizione: this.newDescription.value
         }
         this.props.editSurvey(requestBody)
-
         this.goToHome()
     }
 
@@ -36,6 +32,7 @@ class EditSurvey extends Component {
                 </div>
             </Provider>,
             document.getElementById('root'),
+            //document.getElementById('post-list'),
         );
     }
 

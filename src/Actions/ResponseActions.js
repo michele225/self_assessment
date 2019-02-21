@@ -3,7 +3,8 @@ import ActionTypes from "./ActionTypes";
 
 
 export function asyncCallCheckResponse(data) {
-    var url = 'http://localhost:3002/checkResponse'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbcheckresponse'
+    //var url = 'http://localhost:3002/checkResponse'
 
     return function (dispatch) {
         console.log(JSON.stringify(data))

@@ -1,0 +1,8 @@
+{
+  "id": "com.mattermost.webapp-selfassessment",
+  "name": "selfAssessment",
+  "description": "",
+  "webapp": {
+    "bundle_path": "main.js"
+  }
+}

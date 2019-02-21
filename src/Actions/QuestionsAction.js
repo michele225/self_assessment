@@ -2,9 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function AsyncCallAddQuestions(requestBody) {
-    // var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilebyid'
-    //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetimagebyid'
-    var url = 'http://localhost:3002/saveQuestions'
+    //var url = 'http://localhost:3002/saveQuestions'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavequestions'
 
 
     console.log(JSON.stringify(requestBody))
@@ -20,7 +19,6 @@ export function AsyncCallAddQuestions(requestBody) {
     };
 }
 
-
 export const receivedEvent = (obj) => ({
     type: ActionTypes.ADD_QUESTION,
     payload: {
@@ -28,10 +26,9 @@ export const receivedEvent = (obj) => ({
     },
 });
 
-
-
 export function asyncCallSaveSurvey(requestBody) {
-    var url = 'http://localhost:3002/saveSurvey'
+    //var url = 'http://localhost:3002/saveSurvey'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavesurvey'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
@@ -56,7 +53,6 @@ export const receiveSuervy = (obj) => ({
 export const controlResponse = () => ({
     type: ActionTypes.CONTROL_RESPONSE
 })
-
 
 export const isChecked = () => ({
     type: ActionTypes.IS_CHECKED

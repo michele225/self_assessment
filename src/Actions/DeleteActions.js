@@ -3,8 +3,8 @@ import ActionTypes from "./ActionTypes";
 
 
 export function asyncCallDeleteSurveys(data) {
-    var url = 'http://localhost:3002/deleteSurvey'
-
+    //var url = 'http://localhost:3002/deleteSurvey'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbdeletesurvey'
     return function (dispatch) {
         console.log(JSON.stringify(data))
         axios.post(url,JSON.stringify(data))

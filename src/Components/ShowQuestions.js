@@ -25,7 +25,6 @@ class ShowQuestions extends Component {
         this.props.getSurvey(requestBody)
     }
 
-
     goHomeSurvey = () => {
         ReactDOM.render(
             <Provider store={store}>
@@ -33,7 +32,8 @@ class ShowQuestions extends Component {
                     <SurveyContainer />
                 </div>
             </Provider>,
-            document.getElementById('root'),
+        document.getElementById('root'),
+        //document.getElementById('post-list'),
         );
     }
 
@@ -41,28 +41,15 @@ class ShowQuestions extends Component {
             this.props.reStartSurvey()
     }
 
-
-
-
-
-
     render() {
         let questions=""
         let response = []
-
-
         if(!this.props.responseQuestionSurveyDone){
             this.openSurvey(this.props.Titolo)
         }
-
-
         questions  = this.props.responseAllQuestions.map((question) =>
             <SingleQuestionContainer question = {question} numberQuestion = {this.props.responseAllQuestions.length} />
         )
-
-
-
-
 
         return(
             <div className="App">
@@ -82,20 +69,15 @@ class ShowQuestions extends Component {
 
 
                             </div>
-
-
                             :
                             <div></div>
                     }
-
                 </div>
             </div>
-
         )
-
-
     }
 }
+
 export default ShowQuestions
 
 

@@ -3,7 +3,8 @@ import ActionTypes from "./ActionTypes";
 
 
 export function asyncCallGetAllSurveys() {
-    var url = 'http://localhost:3002/getAllSurveys'
+    var url = "https://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetallsurvey"
+    //var url = 'http://localhost:3002/getAllSurveys'
 
     return function (dispatch) {
         axios.get(url)
@@ -27,7 +28,8 @@ export const receivedAllSurvey = (obj) => ({
 
 
 export function asyncCallGetAllQuestionsSurvey(requestBody) {
-    var url = 'http://localhost:3002/getSurveyQuestions'
+    //var url = 'http://localhost:3002/getSurveyQuestions'
+    var url = "https://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetsurveyquestions"
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))

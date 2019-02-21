@@ -36,11 +36,7 @@ class SingleQuestion extends Component {
         if (checkBox1.checked || checkBox2.checked || checkBox3.checked || checkBox4.checked){
            this.props.controlIsChecked()
         }
-
-
     }
-
-
 
     render() {
         return(
@@ -84,14 +80,9 @@ class SingleQuestion extends Component {
                                     <div> </div>
 
                     }
-
-
                 </ul>
-
-
             </div>
         )
-
     }
 }
 export default SingleQuestion
