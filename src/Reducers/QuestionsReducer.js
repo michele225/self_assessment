@@ -9,7 +9,8 @@ const initialState = {
     responseQuestionSurveyDone: false,
     numberREs: 0,
     numberDomanda: 0,
-    isChecked: false
+    isChecked: false,
+    titoloSurvey: ''
 }
 
 const QuestionsReducer = (state = initialState , action) => {
@@ -36,6 +37,9 @@ const QuestionsReducer = (state = initialState , action) => {
 
         case ActionTypes.IS_CHECKED:
             return { ...state, isChecked: true};
+
+        case ActionTypes.GO_TO_HOME:
+            return { ...state, numberDomanda: initialState.numberDomanda, responseQuestionSurveyDone: false};
 
 
         default:

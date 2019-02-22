@@ -58,3 +58,8 @@ export const isChecked = () => ({
     type: ActionTypes.IS_CHECKED
 })
 
+
+export const returnToHome = () => ({
+    type: ActionTypes.GO_TO_HOME
+})
+

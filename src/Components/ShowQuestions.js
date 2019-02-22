@@ -14,18 +14,20 @@ class ShowQuestions extends Component {
 
     constructor (props){
         super(props);
-        this.state = {
-        }
     }
 
-    openSurvey = (title) => {
+
+
+    openSurvey = () => {
+        console.log("Titolo" + this.props.Titolo)
         const requestBody = {
-            Titolo: title
+            Titolo: this.props.Titolo
         }
         this.props.getSurvey(requestBody)
     }
 
     goHomeSurvey = () => {
+        this.props.returnToHome()
         ReactDOM.render(
             <Provider store={store}>
                 <div>
@@ -45,7 +47,8 @@ class ShowQuestions extends Component {
         let questions=""
         let response = []
         if(!this.props.responseQuestionSurveyDone){
-            this.openSurvey(this.props.Titolo)
+            console.log("Sono Dentro")
+            this.openSurvey()
         }
         questions  = this.props.responseAllQuestions.map((question) =>
             <SingleQuestionContainer question = {question} numberQuestion = {this.props.responseAllQuestions.length} />

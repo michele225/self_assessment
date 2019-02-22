@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import * as actions from "../Actions/SurveyAction";
 import ShowQuestions from "../Components/ShowQuestions";
+import * as actionsQ from "../Actions/QuestionsAction";
 
 
 const mapStateToProps = (state) => {
@@ -8,7 +9,8 @@ const mapStateToProps = (state) => {
         responseAllQuestions: state.QuestionsReducer.responseAllQuestions,
         responseQuestionSurveyDone: state.QuestionsReducer.responseQuestionSurveyDone,
         numberREs: state.QuestionsReducer.numberREs,
-        numberDomanda: state.QuestionsReducer.numberDomanda
+        numberDomanda: state.QuestionsReducer.numberDomanda,
+        responseAddQuestions: state.QuestionsReducer.responseAddQuestions
     };
 };
 
@@ -19,6 +21,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         reStartSurvey:() => {
             dispatch(actions.reStartSurvey())
+        },
+        returnToHome:() => {
+            dispatch(actionsQ.returnToHome())
         }
     }
 }

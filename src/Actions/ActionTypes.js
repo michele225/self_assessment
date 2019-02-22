@@ -10,5 +10,6 @@ export default keyMirror({
     EDIT_SURVEY: null,
     CHECK_RESPONSE: null,
     RESTART_SURVEY: null,
-    IS_CHECKED: null
+    IS_CHECKED: null,
+    GO_TO_HOME: null
 })
