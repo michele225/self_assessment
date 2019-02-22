@@ -42,7 +42,7 @@ class EditSurvey extends Component {
         return(
             <div className="App">
                 <div className="App-header">
-                    <div className="container">
+                    <div className="containerNuovo1">
                     <h3 className="Noteh2">Modifica i Dati del Questionario</h3>
 
                     <form>

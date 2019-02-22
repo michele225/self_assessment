@@ -71,12 +71,12 @@ class Survey extends Component {
         console.log(this.props.responseAllSurveys)
         let surveys = ""
         surveys = this.props.responseAllSurveys.map((survey) =>
-            <a key={survey.Titolo} className="tile" >
+            <a key={survey.Titolo} className="tile22" >
                     <div onClick={() => this.openThisSurvey(survey)}>
-                    <h2 className="tile-description" >  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
+                    <h2 className="tile22-description" >  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
                    <span className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </span>
                     </div>
-                    <div className="tile-divider"></div>
+                    <div className="tile22-divider"></div>
                 <div className="underFile">
                     <img src="https://png.icons8.com/color/edit" onClick={() => this.editSurvey(survey)}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={() => this.deleteSurvey(survey)} />
@@ -92,7 +92,7 @@ class Survey extends Component {
 
                     </a>
 
-                    <div className="tiles-flex">
+                    <div className="tiles-flex22">
                          {surveys}
                   </div>
             </div>

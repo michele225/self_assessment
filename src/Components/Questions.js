@@ -113,7 +113,7 @@ class Questions extends Component {
         return(
             <div className="App">
                 <div className="App-header">
-                <div className="container">
+                <div className="containerNuovo1">
                     <h3 className="Noteh2">Inserisci i Dati del Questionario {this.state.title}</h3>
                     {
                         this.state.numberQ ==0 ?
