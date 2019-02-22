@@ -43,22 +43,22 @@ class SingleQuestion extends Component {
             <div key={this.props.question.Descrizione}>
 
                 <ul className="liResponse">
-                    <h4>Domanda {this.props.numberDomanda+1}/{this.props.numberQuestion}</h4>
-                    <h1> {this.props.question.Descrizione} </h1>
+                    <h4 className="Noteh2">Domanda {this.props.numberDomanda+1}/{this.props.numberQuestion}</h4>
+                    <h1 className="Noteh2" > {this.props.question.Descrizione} </h1>
                     <br/>
-                    <label className="containerCheckbox" onClick={this.isChecking}>  {this.props.question.Risposta_a}
+                    <label className="containerCheckbox Noteh2" onClick={this.isChecking}>  {this.props.question.Risposta_a}
                         <input  id="myCheck1"  name="html" type="radio" value={this.props.question.Risposta_a}/>
                         <span className="checkmark"></span>
                     </label>
-                    <label  className="containerCheckbox" onClick={this.isChecking}> {this.props.question.Risposta_b}
+                    <label  className="containerCheckbox Noteh2" onClick={this.isChecking}> {this.props.question.Risposta_b}
                         <input id="myCheck2" name="html" type="radio" value={this.props.question.Risposta_b}/>
                         <span className="checkmark"></span>
                     </label>
-                    <label className="containerCheckbox" onClick={this.isChecking}>  {this.props.question.Risposta_c}
+                    <label className="containerCheckbox Noteh2" onClick={this.isChecking}>  {this.props.question.Risposta_c}
                         <input id="myCheck3" name="html" type="radio" value={this.props.question.Risposta_c}/>
                         <span className="checkmark"></span>
                     </label>
-                    <label  className="containerCheckbox" onClick={this.isChecking}>  {this.props.question.Risposta_d}
+                    <label  className="containerCheckbox Noteh2" onClick={this.isChecking}>  {this.props.question.Risposta_d}
                         <input  id="myCheck4" name="html" type="radio" value={this.props.question.Risposta_d}/>
                         <span className="checkmark"></span>
                     </label>

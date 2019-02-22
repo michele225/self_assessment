@@ -54,7 +54,7 @@ class ShowQuestions extends Component {
         return(
             <div className="App">
                 <div className="App-header">
-                    <h1> Questionario {this.props.Titolo}</h1>
+                    <h1 className="Noteh2"> Questionario {this.props.Titolo}</h1>
 
                     <div className="container2">
                         {questions[this.props.numberDomanda]}
@@ -63,7 +63,7 @@ class ShowQuestions extends Component {
                     {
                         this.props.numberDomanda==this.props.responseAllQuestions.length?
                             <div>
-                                <h2> Risposte Esatte: {this.props.numberREs} / {this.props.responseAllQuestions.length} </h2>
+                                <h2 className="Noteh2"> Risposte Esatte: {this.props.numberREs} / {this.props.responseAllQuestions.length} </h2>
                                 <button onClick={this.goHomeSurvey}  className="addQuestion button3"> Go to Home </button>
                                 <button onClick={this.restart}  className="addQuestion button2"> Re-Start  </button>
 
