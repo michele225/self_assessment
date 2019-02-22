@@ -20,7 +20,6 @@
 
 .addQuestion {
   border: none;
-  padding: 1% 2%;
   text-align: center;
   text-decoration: none;
   margin: 4px 2px;
@@ -402,19 +401,85 @@
   border: 1px solid #006FE6;
   cursor: pointer;
   margin-bottom: 5%;
-  margin-top: 10%;
+  margin-top: -10%;
 }
 .btn-toolset:hover {
   background-color: #006FE6;
   border-color: #f9fbff;
   color: #f9fbff;
 }
-.btn-toolset > strong {
-  font-size: 24px;
-}
+
 
 
 .Noteh2{
   color: black;
   font-family: inherit;
+  padding: 0 !important;
+}
+
+.NoteH1Questionario{
+  color: black;
+  font-family: inherit;
+  padding: 0 !important;
+}
+
+.Noteh2rRisposteEsatte{
+  color: black;
+  font-family: inherit;
+  padding: 0 !important;
+}
+
+.Noteh2InserisciDatiQuest{
+  color: black;
+  font-family: inherit;
+  padding: 0 !important;
+}
+
+.Noteh2InsDomanda{
+  color: black;
+  font-family: inherit;
+  padding: 0 !important;
+}
+.Noteh2InsRisposta{
+  color: black;
+  font-family: inherit;
+  padding: 0 !important;
+}
+
+
+.headerSelf {
+  display: block;
+  width: 100%;
+  padding: 1.75em 0;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--neutral-color);
+}
+
+.headerSelf #logoSelf {
+  font-size: 175%;
+  text-align: center;
+  color: #1a8fff;
+  line-height: 1;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+.iconSelf {
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
 }

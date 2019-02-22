@@ -85,6 +85,15 @@ class Survey extends Component {
         )
 
         return(
+            <div>
+            <header className="headerSelf">
+                <div id="logoSelf">
+                    <span className="iconSelf"></span>
+                    <span>
+              Self<b>Assessment</b>
+            </span>
+                </div>
+            </header>
             <div className="App">
                 <div className="App-header">
                     <a className="btn-toolset addSurvey" onClick={this.addSurvey}>
@@ -95,6 +104,7 @@ class Survey extends Component {
                     <div className="tiles-flex22">
                          {surveys}
                   </div>
+            </div>
             </div>
             </div>
         )

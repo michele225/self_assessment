@@ -40,6 +40,15 @@ class EditSurvey extends Component {
     render() {
 
         return(
+            <div>
+            <header className="headerSelf">
+                <div id="logoSelf">
+                    <span className="iconSelf"></span>
+                    <span>
+              Self<b>Assessment</b>
+            </span>
+                </div>
+            </header>
             <div className="App">
                 <div className="App-header">
                     <div className="containerNuovo1">
@@ -61,7 +70,7 @@ class EditSurvey extends Component {
                     </div>
                 </div>
             </div>
-
+            </div>
         )
 
 

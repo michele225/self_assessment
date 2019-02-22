@@ -111,10 +111,20 @@ class Questions extends Component {
 
     render() {
         return(
+            <div>
+            <header className="headerSelf">
+                <div id="logoSelf">
+                    <span className="iconSelf"></span>
+                    <span>
+              Self<b>Assessment</b>
+            </span>
+                </div>
+            </header>
+
             <div className="App">
                 <div className="App-header">
                 <div className="containerNuovo1">
-                    <h3 className="Noteh2">Inserisci i Dati del Questionario {this.state.title}</h3>
+                    <h3 className="Noteh2InserisciDatiQuest">Inserisci i Dati del Questionario {this.state.title}</h3>
                     {
                         this.state.numberQ ==0 ?
                             <form>
@@ -127,13 +137,12 @@ class Questions extends Component {
                             <div></div>
 
                     }
-
-                    <h2 className="Noteh2">Inserisci una nuova domanda</h2>
+                    <h2 className="Noteh2InsDomanda">Inserisci una nuova domanda</h2>
                     <form>
                         <input type="text" className=" insertQuestion" placeholder="... New Question ..." ref={(input) => this.getQuestion = input}/>
                         <br/>
                     </form>
-                    <h2 className="Noteh2">Inserisci le risposte</h2>
+                    <h2 className="Noteh2InsRisposta">Inserisci le risposte</h2>
                     <ul className="listStyle">
                         <li className="answer"><input className="insertAnswers" type="text" placeholder="Answer 1" ref={(input) => this.answer1 = input}/> </li>
                         <li className="answer" > <input className="insertAnswers" type="text" placeholder="Answer 2" ref={(input) => this.answer2 = input}/>   </li>
@@ -153,6 +162,7 @@ class Questions extends Component {
                     }
                 </div>
                 </div>
+            </div>
             </div>
         )
     }
