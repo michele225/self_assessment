@@ -143,7 +143,7 @@ class Questions extends Component {
                 </ul>
                 <br/>
                     <button className="addQuestion button2" onClick={this.saveNewSurvey} >
-                        <span className="NoteSpan" >Save & Complete Survey</span>
+                        <span>Save & Complete Survey</span>
                     </button>
                     <button className="addQuestion button3" onClick={this.addQuestions}>
                         <span>New Question</span>
