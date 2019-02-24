@@ -60,6 +60,10 @@ class Survey extends Component {
             document.getElementById('root'),
             //document.getElementById('post-list'),
         );
+        //                   <!-- <span className="iconSelf"> archive</span> per il media repo -->
+        //                   <!-- <span className="iconSelf"> comment</span> per il blog -->
+        //https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
+
 
     }
 
@@ -87,7 +91,8 @@ class Survey extends Component {
             <div>
             <header className="headerSelf">
                 <div id="logoSelf">
-                    <span className="iconSelf"></span>
+                    <span className="iconSelf"> comment</span>
+
                     <span>
               Self<b>Assessment</b>
             </span>
