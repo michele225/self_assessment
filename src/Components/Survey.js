@@ -6,7 +6,6 @@ import ShowQuestionsContainer from "../Containers/ShowQuestionsContainer";
 import SurveyContainer from "../Containers/SurveyContainer";
 import Questions from "./Questions";
 import ReactDOM from 'react-dom';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import EditSurveyContainer from "../Containers/EditSurveyContainer";
 
 

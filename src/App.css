@@ -112,6 +112,10 @@
 .container2{
     margin-top: 10%;
     height: 90%;
+  margin-left: 10%;
+  width: 80%;
+  border-color: white;
+  border-style: outset;
 }
 
 
@@ -482,4 +486,27 @@
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
+}
+
+.riquadroDomanda{
+  width: 50%;
+  margin-left: 25%;
+  border-style: solid;
+  border-color: black;
+  position: absolute;
+}
+
+.questions-divider {
+  height: 2px;
+  width: 80%;
+  margin: 0 10%;
+  border: .5px solid #343537;
+  background-color: #343537;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+
+.floatTextPos{
+  float: left;
 }
