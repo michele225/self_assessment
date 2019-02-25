@@ -78,7 +78,6 @@ class SingleQuestion extends Component {
                                 <button className="button2 addQuestion" onClick={() => this.verificaRisposta(this.props.question)}> FINISH </button>
                                     :
                                     <div> </div>
-
                     }
                 </ul>
             </div>

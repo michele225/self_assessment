@@ -13,6 +13,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         editSurvey:(requestBody) => {
             dispatch(actionsEdit.asyncCallEditSurveys(requestBody))
+        },
+        closeEdit:() => {
+            dispatch(actionsEdit.closeEdit())
         }
     }
 }

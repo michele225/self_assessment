@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch) => {
         deleteSurvey:(requestBody) => {
             dispatch(actionsDelete.asyncCallDeleteSurveys(requestBody))
         },
-        editSurvey:(requestBody) => {
-            dispatch(actionsEdit.asyncCallEditSurveys(requestBody))
+        editSurveyClicked:(survey) => {
+            dispatch(actionsEdit.editSurveyClicked(survey))
         }
     }
 }

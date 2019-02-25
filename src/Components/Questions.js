@@ -14,7 +14,7 @@ class Questions extends Component {
         this.state = {
             questions: [],
             numberQ : 0,
-            title : ""
+            title : null
         }
     }
 
@@ -38,99 +38,95 @@ class Questions extends Component {
     }
 
     addQuestions = () => {
-        console.log(this.state.title)
-        if (this.state.title = null) {
+        let title = this.state.title
+        if (this.state.title == null) {
             alert("Inserire Titolo Questionario")
         }
         else if ((this.answer1.value == '' || this.answer2.value == '' || this.answer3.value == '' || this.answer4.value == '' || this.answerOK.value == '') && this.state.numberQ==0) {
-        alert("Non Lasciare Campi Vuoti")
-        }
-               else {
-                    let requestBody = ""
-                    if (this.state.numberQ != 0) {
-                        console.log("domnde diverse da zero")
-                        requestBody = {
-                            Canale: 'Town Square',
-                            Tipo: 'Ospedale',
-                            Descrizione: this.getQuestion.value,
-                            Risposta_a: this.answer1.value,
-                            Risposta_b: this.answer2.value,
-                            Risposta_c: this.answer3.value,
-                            Risposta_d: this.answer4.value,
-                            Risposta_esatta: this.answerOK.value,
-                            Titolo: this.state.title
-                        }
-                    } else {
-                        this.setState({
-                            title: this.getTitle.value
-                        })
-                        requestBody = {
-                            Canale: 'Town Square',
-                            Tipo: 'Ospedale',
-                            Descrizione: this.getQuestion.value,
-                            Risposta_a: this.answer1.value,
-                            Risposta_b: this.answer2.value,
-                            Risposta_c: this.answer3.value,
-                            Risposta_d: this.answer4.value,
-                            Risposta_esatta: this.answerOK.value,
-                            Titolo: this.getTitle.value
-                        }
+            alert("Non Lasciare Campi Vuoti")
+        }else {
+            let requestBody = ""
+                if (this.state.numberQ != 0) {
+                    requestBody = {
+                        Canale: 'Town Square',
+                        Domanda: this.getQuestion.value,
+                        Risposta_a: this.answer1.value,
+                        Risposta_b: this.answer2.value,
+                        Risposta_c: this.answer3.value,
+                        Risposta_d: this.answer4.value,
+                        Risposta_esatta: this.answerOK.value,
+                        Titolo: title
                     }
-                    //per salvare questionario solo la prima volta
-                    if (questionsCopia.length == 0) {
-                        const requestBodySurvey = {
-                            Canale: 'Town Square',
-                            Titolo: this.getTitle.value,
-                            Descrizione: this.getDescription.value,
-                        }
-                        this.props.addSurvey(requestBodySurvey)
+                } else {
+                    this.setState({
+                        title: this.getTitle.value
+                    })
+                    requestBody = {
+                        Canale: 'Town Square',
+                        Domanda: this.getQuestion.value,
+                        Risposta_a: this.answer1.value,
+                        Risposta_b: this.answer2.value,
+                        Risposta_c: this.answer3.value,
+                        Risposta_d: this.answer4.value,
+                        Risposta_esatta: this.answerOK.value,
+                        Titolo: this.getTitle.value
                     }
-                    this.props.addQuestions(requestBody)
-                    this.setState({
-                        numberQ: this.state.numberQ + 1
-                    })
-                    questionsCopia = this.state.questions;
-                    questionsCopia.push(
-                        <div className="container2" key={this.state.numberQ}>
-                            <div className="questions-divider"/>
-                            <h5 className="Noteh2">Domanda n° {this.state.numberQ}: {this.getQuestion.value} </h5>
-                            <h7 className="Noteh2">Risposte</h7>
-                            <ul className="listStyle">
-                                <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
-                                    1): {this.answer1.value} </h8> </label></li>
-                                <br/>
-                                <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
-                                    2): {this.answer2.value}</h8> </label></li>
-                                <br/>
-                                <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
-                                    3): {this.answer3.value} </h8> </label></li>
-                                <br/>
-                                <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
-                                    4): {this.answer4.value} </h8> </label></li>
-                                <br/>
-                                <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
-                                    Esatta: {this.answerOK.value} </h8> </label></li>
-                                <br/>
-                            </ul>
-                            <br/>
-
-                            {
-                                questionsCopia[this.state.numberQ - 1]
-                            }
-                        </div>
-                    )
-                    this.getQuestion.value = ""
-                    this.answer1.value = ""
-                    this.answer2.value = ""
-                    this.answer3.value = ""
-                    this.answer4.value = ""
-                    this.answerOK.value = ""
-
-                    this.setState({
-                        questions: questionsCopia
-                    })
-                    console.log(this.state.questions)
                 }
+                //per salvare questionario solo la prima volta
+                if (questionsCopia.length == 0) {
+                    const requestBodySurvey = {
+                        Canale: 'Town Square',
+                        Titolo: this.getTitle.value,
+                        Descrizione: this.getDescription.value,
+                    }
+                    this.props.addSurvey(requestBodySurvey)
+                }
+                this.props.addQuestions(requestBody)
+                this.setState({
+                    numberQ: this.state.numberQ + 1
+                })
+                questionsCopia = this.state.questions;
+                questionsCopia.push(
+                    <div className="container2" key={this.state.numberQ}>
+                        <div className="questions-divider"/>
+                        <h5 className="Noteh2">Domanda n° {this.state.numberQ}: {this.getQuestion.value} </h5>
+                        <h7 className="Noteh2">Risposte</h7>
+                        <ul className="listStyle">
+                            <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
+                                1): {this.answer1.value} </h8> </label></li>
+                            <br/>
+                            <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
+                                2): {this.answer2.value}</h8> </label></li>
+                            <br/>
+                            <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
+                                3): {this.answer3.value} </h8> </label></li>
+                            <br/>
+                            <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
+                                4): {this.answer4.value} </h8> </label></li>
+                            <br/>
+                            <li className="answer"><label className="insertAnswers"> <h8 className="floatTextPos">
+                                Esatta: {this.answerOK.value} </h8> </label></li>
+                            <br/>
+                        </ul>
+                        <br/>
+
+                        {
+                            questionsCopia[this.state.numberQ - 1]
+                        }
+                    </div>
+                )
+                this.getQuestion.value = ""
+                this.answer1.value = ""
+                this.answer2.value = ""
+                this.answer3.value = ""
+                this.answer4.value = ""
+                this.answerOK.value = ""
+
+                this.setState({
+                    questions: questionsCopia
+                })
+                console.log(this.state.questions)
+            }
     }
 
     render() {

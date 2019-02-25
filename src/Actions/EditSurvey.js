@@ -26,3 +26,16 @@ export const receivedEditResponse = (obj) => ({
         newValue: obj
     },
 })
+
+export const editSurveyClicked = (obj) => ({
+    type: ActionTypes.EDIT_SURVEY_CLICKED,
+    payload: {
+        newValue: obj
+    },
+})
+
+export const closeEdit = () => ({
+    type: ActionTypes.CLOSE_EDIT_SURVEY
+})
+
+

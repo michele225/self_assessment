@@ -11,5 +11,7 @@ export default keyMirror({
     CHECK_RESPONSE: null,
     RESTART_SURVEY: null,
     IS_CHECKED: null,
-    GO_TO_HOME: null
+    GO_TO_HOME: null,
+    EDIT_SURVEY_CLICKED: null,
+    CLOSE_EDIT_SURVEY: null
 })

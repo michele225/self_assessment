@@ -36,16 +36,17 @@ class Survey extends Component {
         this.props.deleteSurvey(requestBody)
     }
 
-    editSurvey = (survey) => {
-        ReactDOM.render(
+    editSurveyClicked = (survey) => {
+        this.props.editSurveyClicked(survey)
+        /*ReactDOM.render(
             <Provider store={store}>
                 <div>
-                    <EditSurveyContainer Survey={survey} />
+                    <EditSurveyContainer survey={survey} />
                 </div>
             </Provider>,
             document.getElementById('root'),
             //document.getElementById('post-list'),
-        );
+        );*/
     }
 
 
@@ -71,34 +72,24 @@ class Survey extends Component {
         if(!this.props.getAllSurveyDone){
             this.props.asyncCallGetAllSurveys();
         }
-        console.log(this.props.responseAllSurveys)
         let surveys = ""
         surveys = this.props.responseAllSurveys.map((survey) =>
             <a key={survey.Titolo} className="tile22" >
                     <div onClick={() => this.openThisSurvey(survey)}>
-                    <h2 className="tile22-description" >  <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>      </h2>
+                    <h2 className="tile22-description" >
+                        <span className="TitoloSurvey">Titolo: {survey.Titolo} </span>
+                    </h2>
                    <span className="DescrizioneSurvey"> Descrizione: {survey.Descrizione}  </span>
                     </div>
                     <div className="tile22-divider"></div>
                 <div className="underFile">
-                    <img src="https://png.icons8.com/color/edit" onClick={() => this.editSurvey(survey)}/>
+                    <img src="https://png.icons8.com/color/edit" onClick={() => this.editSurveyClicked(survey)}/>
                     <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={() => this.deleteSurvey(survey)} />
                 </div>
             </a>
         )
 
         return(
-            <div>
-            <header className="headerSelf">
-                <div id="logoSelf">
-                    <span className="iconSelf"> comment</span>
-
-                    <span>
-              Self<b>Assessment</b>
-            </span>
-                </div>
-            </header>
-            <div className="App">
                 <div className="App-header">
                     <a className="btn-toolset addSurvey" onClick={this.addSurvey}>
                          <strong>Add Survey</strong>
@@ -108,8 +99,6 @@ class Survey extends Component {
                     <div className="tiles-flex22">
                          {surveys}
                   </div>
-            </div>
-            </div>
             </div>
         )
     }

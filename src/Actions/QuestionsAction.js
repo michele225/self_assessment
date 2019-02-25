@@ -2,8 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function AsyncCallAddQuestions(requestBody) {
-    //var url = 'http://localhost:3002/saveQuestions'
-    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavequestions'
+    var url = 'http://localhost:3002/saveQuestions'
+    //var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavequestions'
 
 
     console.log(JSON.stringify(requestBody))

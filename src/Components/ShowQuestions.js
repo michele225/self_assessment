@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import $ from "jquery";
-import SingleQuestion from "./SingleQuestion";
-
 import SingleQuestionContainer from "../Containers/SingleQuestionContainer"
 import ReactDOM from "react-dom";
 import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
-import SurveyContainer from "../Containers/SurveyContainer";
+import AppContainer from "../Containers/AppContainer";
 
 
 class ShowQuestions extends Component {
@@ -31,7 +28,7 @@ class ShowQuestions extends Component {
         ReactDOM.render(
             <Provider store={store}>
                 <div>
-                    <SurveyContainer />
+                    <AppContainer />
                 </div>
             </Provider>,
         document.getElementById('root'),

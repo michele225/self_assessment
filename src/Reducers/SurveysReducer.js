@@ -5,7 +5,7 @@ const initialState = {
     responseAllSurveys: [],
     getAllSurveyDone: false,
     responseDelete: null,
-    responseEdit: null
+    responseEdit: null,
 }
 
 const SurveysReducer = (state = initialState , action) => {

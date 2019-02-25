@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./App";
+import App from "./Containers/AppContainer";
 import $ from "jquery";
 import { Provider } from 'react-redux';
 import store from './Store/AppStore'
