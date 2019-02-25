@@ -14,13 +14,12 @@ class Questions extends Component {
         this.state = {
             questions: [],
             numberQ : 0,
-            title : null
+            title : "... Survey Title ..."
         }
     }
 
     saveNewSurvey =() => {
-        if(
-            (this.answer1.value == '' || this.answer2.value == ''|| this.answer3.value =='' ||  this.answer4.value =='' ||
+        if((this.answer1.value == '' || this.answer2.value == ''|| this.answer3.value =='' ||  this.answer4.value =='' ||
             this.answerOK.value =='' )&& this.state.numberQ==0){
             alert("Non Lasciare Campi Vuoti")
         }
@@ -39,10 +38,7 @@ class Questions extends Component {
 
     addQuestions = () => {
         let title = this.state.title
-        if (this.state.title == null) {
-            alert("Inserire Titolo Questionario")
-        }
-        else if ((this.answer1.value == '' || this.answer2.value == '' || this.answer3.value == '' || this.answer4.value == '' || this.answerOK.value == '') && this.state.numberQ==0) {
+        if ((this.answer1.value == '' || this.answer2.value == '' || this.answer3.value == '' || this.answer4.value == '' || this.answerOK.value == '') && this.state.numberQ==0) {
             alert("Non Lasciare Campi Vuoti")
         }else {
             let requestBody = ""
@@ -125,7 +121,6 @@ class Questions extends Component {
                 this.setState({
                     questions: questionsCopia
                 })
-                console.log(this.state.questions)
             }
     }
 

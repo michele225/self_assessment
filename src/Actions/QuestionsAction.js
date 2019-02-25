@@ -27,8 +27,8 @@ export const receivedEvent = (obj) => ({
 });
 
 export function asyncCallSaveSurvey(requestBody) {
-    //var url = 'http://localhost:3002/saveSurvey'
-    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavesurvey'
+    var url = 'http://localhost:3002/saveSurvey'
+    //var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavesurvey'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
