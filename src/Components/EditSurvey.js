@@ -22,9 +22,9 @@ class EditSurvey extends Component {
     render() {
         document.body.style.overflowY = "hidden"
         return(
-            <div className="App myPost">
-                <div className="myOpacity"></div>
-                <div className="myForm">
+            <div className="App mySelf">
+                <div className="myOpacitySelf"></div>
+                <div className="myFormSelf">
                     <div className="containerNuovo1">
                     <h3 className="Noteh2">Modifica i Dati del Questionario</h3>
                         <div>
