@@ -3,8 +3,8 @@ import ActionTypes from "./ActionTypes";
 
 
 export function asyncCallGetAllSurveys() {
-    //var url = "https://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetallsurvey"
-     var url = 'http://localhost:3002/getAllSurveys'
+    var url = "https://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetallsurvey"
+     //var url = 'http://localhost:3002/getAllSurveys'
 
     return function (dispatch) {
         axios.get(url)

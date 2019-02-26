@@ -131,7 +131,7 @@
 
 .tile22 {
   border-top: 8px solid #343537;
-  background-color: #fff;
+  background-color: #ffe9ca;
   box-shadow: 0.5px 2px 4px 0 #bdbdbd;
   width: 200px;
   height: auto;
@@ -398,7 +398,18 @@
   border: 1px solid #006FE6;
   cursor: pointer;
   margin-bottom: 5%;
-  margin-top: -10%;
+  margin-top: -250px;
+  margin-left: 4%;
+}
+@media screen and (max-width: 1200px) {
+  .btn-toolset {
+    margin-top: 0%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .btn-toolset {
+    margin-top: 10%;
+  }
 }
 .btn-toolset:hover {
   background-color: #006FE6;
