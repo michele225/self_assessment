@@ -23,7 +23,7 @@ class AppComponent extends React.Component{
                 <div id="navi">
                     <header className="headerSelf">
                         <div id="logoSelf">
-                            <span className="iconSelf"> comment</span>
+                            <span className="iconSelf"> question_answer</span>
                             <span> Self<b>Assessment </b> </span>
                         </div>
                     </header>

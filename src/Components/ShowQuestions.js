@@ -54,7 +54,7 @@ class ShowQuestions extends Component {
             <div>
             <header className="headerSelf">
                 <div id="logoSelf">
-                    <span className="iconSelf"></span>
+                    <span className="iconSelf"> question_answer </span>
                     <span>
               Self<b>Assessment</b>
             </span>
