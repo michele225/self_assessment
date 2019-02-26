@@ -40,11 +40,11 @@ class SingleQuestion extends Component {
 
     render() {
         return(
-            <div key={this.props.question.Descrizione}>
+            <div key={this.props.question.Domande}>
 
                 <ul className="liResponse">
                     <h4 className="Noteh2">Domanda {this.props.numberDomanda+1}/{this.props.numberQuestion}</h4>
-                    <h1 className="Noteh2" > {this.props.question.Descrizione} </h1>
+                    <h1 className="Noteh2" > {this.props.question.Domande} </h1>
                     <br/>
                     <label className="containerCheckbox Noteh2" onClick={this.isChecking}>  {this.props.question.Risposta_a}
                         <input  id="myCheck1"  name="html" type="radio" value={this.props.question.Risposta_a}/>

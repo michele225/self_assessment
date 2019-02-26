@@ -14,7 +14,7 @@ class Questions extends Component {
         this.state = {
             questions: [],
             numberQ : 0,
-            title : "... Survey Title ..."
+            title : ""
         }
     }
 
@@ -45,7 +45,7 @@ class Questions extends Component {
                 if (this.state.numberQ != 0) {
                     requestBody = {
                         Canale: 'Town Square',
-                        Domanda: this.getQuestion.value,
+                        Domande: this.getQuestion.value,
                         Risposta_a: this.answer1.value,
                         Risposta_b: this.answer2.value,
                         Risposta_c: this.answer3.value,
@@ -59,7 +59,7 @@ class Questions extends Component {
                     })
                     requestBody = {
                         Canale: 'Town Square',
-                        Domanda: this.getQuestion.value,
+                        Domande: this.getQuestion.value,
                         Risposta_a: this.answer1.value,
                         Risposta_b: this.answer2.value,
                         Risposta_c: this.answer3.value,

@@ -44,7 +44,6 @@ class ShowQuestions extends Component {
         let questions=""
         let response = []
         if(!this.props.responseQuestionSurveyDone){
-            console.log("Sono Dentro")
             this.openSurvey()
         }
         questions  = this.props.responseAllQuestions.map((question) =>

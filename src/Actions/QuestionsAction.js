@@ -4,9 +4,6 @@ import ActionTypes from "./ActionTypes";
 export function AsyncCallAddQuestions(requestBody) {
     var url = 'http://localhost:3002/saveQuestions'
     //var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavequestions'
-
-
-    console.log(JSON.stringify(requestBody))
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
             .then((result) => {
@@ -27,8 +24,8 @@ export const receivedEvent = (obj) => ({
 });
 
 export function asyncCallSaveSurvey(requestBody) {
-    var url = 'http://localhost:3002/saveSurvey'
-    //var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavesurvey'
+    //var url = 'http://localhost:3002/saveSurvey'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsavesurvey'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
