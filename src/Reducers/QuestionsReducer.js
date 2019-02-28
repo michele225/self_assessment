@@ -39,7 +39,7 @@ const QuestionsReducer = (state = initialState , action) => {
             return { ...state, isChecked: true};
 
         case ActionTypes.GO_TO_HOME:
-            return { ...state, numberDomanda: initialState.numberDomanda, responseQuestionSurveyDone: false};
+            return { ...state, numberDomanda: initialState.numberDomanda, responseQuestionSurveyDone: false, numberREs:initialState.numberREs};
 
 
         default:
