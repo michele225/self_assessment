@@ -38,10 +38,12 @@ class Questions extends Component {
 
     addQuestions = () => {
         let title = this.state.title
+        console.log("Domanda" + this.state.numberQ)
         if ((this.answer1.value == '' || this.answer2.value == '' || this.answer3.value == '' || this.answer4.value == '' || this.answerOK.value == '') && this.state.numberQ==0) {
             alert("Non Lasciare Campi Vuoti")
         }else {
             let requestBody = ""
+            console.log("Domanda If" + this.state.numberQ)
                 if (this.state.numberQ != 0) {
                     requestBody = {
                         Canale: 'Town Square',
@@ -67,16 +69,16 @@ class Questions extends Component {
                         Risposta_esatta: this.answerOK.value,
                         Titolo: this.getTitle.value
                     }
+                     const requestBodySurvey = {
+                            Canale: 'Town Square',
+                            Titolo: this.getTitle.value,
+                            Descrizione: this.getDescription.value,
+                        }
+                        this.props.addSurvey(requestBodySurvey)
+
                 }
                 //per salvare questionario solo la prima volta
-                if (questionsCopia.length == 0) {
-                    const requestBodySurvey = {
-                        Canale: 'Town Square',
-                        Titolo: this.getTitle.value,
-                        Descrizione: this.getDescription.value,
-                    }
-                    this.props.addSurvey(requestBodySurvey)
-                }
+
                 this.props.addQuestions(requestBody)
                 this.setState({
                     numberQ: this.state.numberQ + 1
