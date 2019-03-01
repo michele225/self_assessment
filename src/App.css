@@ -615,6 +615,11 @@
   background: rgba(0,0,0,1);
   opacity: 0.5;
 }
+@media screen and (max-width: 1750px) {
+  .myOpacitySelf {
+    height: 300%;
+  }
+}
 
 .myFormSelf {
   z-index: 10;

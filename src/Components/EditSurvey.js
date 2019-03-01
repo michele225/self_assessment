@@ -6,6 +6,13 @@ class EditSurvey extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        document.getElementById("opacitaEditSelf").style.marginTop = document.getElementById("post-list").scrollTop + "px";
+        //document.getElementsByClassName("myOpacityCalendar")[0].style.height = Math.max( document.body.scrollHeight) + "px"
+        document.getElementById("post-list").style.overflowY = "hidden"
+        document.getElementsByClassName("myOpacitySelf")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
+    }
+
     editSurvey = () => {
         const requestBody = {
             Titolo: this.newTitle.value,
@@ -25,7 +32,7 @@ class EditSurvey extends Component {
             <div className="App mySelf">
                 <div className="myOpacitySelf"></div>
                 <div className="myFormSelf">
-                    <div className="containerNuovo1">
+                    <div id="opacitaEditSelf" className="containerNuovo1">
                     <h3 className="Noteh2">Modifica i Dati del Questionario</h3>
                         <div>
                             <input type="text" className=" insertQuestion" defaultValue={this.props.survey.Titolo} ref={(input) => this.newTitle = input}/>

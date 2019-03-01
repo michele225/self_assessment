@@ -9,6 +9,7 @@ class AppComponent extends React.Component{
     }
 
     render() {
+        //document.getElementById("post-list").style.overflowY = "scroll"
         document.body.style.overflowY = "scroll"
         return (
             <div id= "appPreview">
